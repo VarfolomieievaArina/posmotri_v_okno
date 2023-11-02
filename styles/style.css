@@ -51,16 +51,11 @@ ol {
 .content {
   display: flex;
   justify-content: center;
-  align-items: center; /*flex-end*/
+  align-items: center;
   gap: 30px;
   padding: 133px 30px;
-  height: 100%; /*добавила*/
-}
-
-/*.content__details {
-  width: 100%;
   height: 100%;
-}*/
+}
 
 .result__video-container {
   position: relative;
@@ -83,12 +78,12 @@ fieldset{
   display:flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin: 5px;
 }
 
 .search-form__label {
   display: flex;
   width: fit-content;
+  gap: 5px;
 }
 
 .search-form__label:has(:focus-visible) {
@@ -109,6 +104,7 @@ fieldset{
   display: block;
   width: 225px;
   height: 27px;
+  color: #FFF;
   align-items: center;
   gap: 10px;
   background-color: transparent;
@@ -116,6 +112,7 @@ fieldset{
   border-right: none;
   border-top: 1px solid #FFF;
   border-bottom: 1px solid #FFF;
+  /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
   color: rgba(255 255 255 0.70);
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
@@ -127,7 +124,7 @@ fieldset{
 
 .search-form__checkbox-list {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   align-items: center;
 }
 
@@ -138,6 +135,7 @@ fieldset{
   width: 19px;
   height: 19px;
   outline: 1px solid #FFF;
+  cursor: pointer;
 }
 
  .search-form__label-text:hover {
@@ -202,6 +200,7 @@ fieldset{
   height: 298px;
   overflow: auto;
   position: relative;
+  top: -40px;
   padding: 2px;
 }
 
@@ -264,6 +263,8 @@ fieldset{
   font-weight: 700;
   line-height: 94%;
   text-transform: uppercase;
+  position: relative;
+  top: -35px;
 }
 
 .content__accent {
