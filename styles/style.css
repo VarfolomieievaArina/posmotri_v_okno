@@ -36,3 +36,266 @@ ul,
 ol {
   list-style: none;
 }
+
+/** {
+  color: red;
+} /*было изначально, убрала*/
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 30px;
+  padding: 133px 30px;
+}
+
+.content__details {
+  width: 100%;
+  height: 100%;
+}
+
+.result__video-container {
+  position: relative;
+  width: 711px;
+  height: 386px;
+  margin-bottom: 16px;
+}
+
+.result__video {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+fieldset{
+  border: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+} 
+
+.search-form {
+  display:flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 5px;
+}
+
+.search-form__label {
+  display: flex;
+  width: fit-content;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #FFF;
+}
+
+.search-form__fieldset-title {
+  color: #FFF;
+  font-family: Fira Sans Condensed, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 5px;
+}
+
+.search-form__textfield {
+  display: block;
+  width: 225px;
+  height: 27px;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  border-left: none;
+  border-right: none;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  color: rgba(255, 255, 255, 0.70);
+  font-family: Fira Sans Condensed, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  appearance: none;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.search-form__pseudo-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 19px;
+  height: 19px;
+  outline: 1px solid #FFF;
+}
+
+ .search-form__label-text:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
+  content: "";
+  display: block;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  background-color: #FFF;
+}
+
+.button {
+  display: block;
+  justify-content: center;
+  align-items:center;
+  background-color: transparent;
+  border: 1px solid #FFF;
+  color: #FFF;
+  text-align: center;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.button:active {
+  outline: 1px solid #FFF;
+  background: #545050;
+}
+
+.button:focus-visible {
+  outline: 1px solid #FFF;
+  outline-offset: 1px;
+}
+
+.button:focus {
+  outline-offset: none;
+}
+
+.more-button {
+  width: 399px;
+  height: 34px;
+}
+
+.search-form__submit-button{
+  width: 194px;
+  height: 34px;
+}
+
+.content__list {
+  height: 298px;
+  overflow: auto;
+  position: relative;
+  padding: 2px;
+}
+
+.content__list-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.content__video-card{
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  width: 394px;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #FFF;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+  width: 100%;
+}
+
+.content__video-card-description-container {
+  width: 100%;
+}
+
+.title {
+  margin-bottom: 26px;
+  color: #FFF;
+  font-family: Oswald, sans-serif;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 94%;
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color: #545050;
+  font-family: Oswald, sans-serif;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 94%; 
+  text-transform: uppercase;
+}
+
+.content__card-link {
+  display: block;
+  color: #FFF;
+  text-decoration: none;
+  padding: 2px;
+  outline-style: none;
+  width: 394px;
+}
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__video-card-title {
+  color: #FFF;
+  font-family: Oswald, sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  text-transform: uppercase;
+  padding-top: 6px; /*добавила, чтобы при состоянии :hover у карточки сверху была ровная линия*/
+  padding-bottom: 6px;
+}
+
+.content__video-card-description {
+  color: #FFF;
+  font-family: Fira Sans Condensed, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%;
+}
