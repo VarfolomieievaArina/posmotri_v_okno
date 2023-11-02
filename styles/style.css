@@ -11,16 +11,12 @@ html {
 .page {
   inline-size: 1200px;
   block-size: 100%;
-  margin: auto;
-  top:50%;
+  justify-content: center;
+  align-items: center;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-}
-
-input {
-  padding: 0;
 }
 
 h1,
