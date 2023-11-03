@@ -54,20 +54,21 @@ ol {
   align-items: center;
   gap: 30px;
   padding: 133px 30px;
-  height: 100%;
+  block-size: 100%;
 }
 
 .result__video-container {
   position: relative;
-  width: 711px;
-  height: 386px;
+  inline-size: 711px;
+  block-size: 386px;
   margin-bottom: 16px;
 }
 
 .result__video {
-width: 100%;
-height: 100%;
+inline-size: 100%;
+block-size: 100%;
 object-fit: cover;
+object-position: center;
 }
 
 fieldset{
@@ -82,13 +83,16 @@ fieldset{
 
 .search-form__label {
   display: flex;
-  width: fit-content;
+  inline-size: fit-content;
   gap: 5px;
+  align-items: center;
+  padding: 1px;
 }
 
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #FFF;
 }
+
 
 .search-form__fieldset-title {
   color: #FFF;
@@ -97,29 +101,33 @@ fieldset{
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-bottom: 5px;
+  margin-block-end: 5px;
 }
 
 .search-form__textfield {
   display: block;
-  width: 225px;
-  height: 27px;
+  inline-size: 225px;
+  block-size: 27px;
   color: #FFF;
   align-items: center;
   gap: 10px;
   background-color: transparent;
-  border-left: none;
-  border-right: none;
-  border-top: 1px solid #FFF;
-  border-bottom: 1px solid #FFF;
+  border-inline-start: none;
+  border-inline-end: none;
+  border-block-start: 1px solid #FFF;
+  border-block-end: 1px solid #FFF;
   /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
   color: rgba(255 255 255 0.70);
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: inherit; /*наследуется от .page*/
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   appearance: none;
+}
+
+.search-form__textfield:focus {
+  outline: none;
 }
 
 .search-form__checkbox-list {
@@ -132,39 +140,36 @@ fieldset{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 19px;
-  height: 19px;
-  outline: 1px solid #FFF;
-  cursor: pointer;
+  inline-size: 19px;
+  block-size: 19px;
+  border: 1px solid #FFF;
 }
 
- .search-form__label-text:hover {
+.search-form__label:has(.search-form__checkbox):hover {
   cursor: pointer;
   text-decoration: underline;
 }
+
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
   content: "";
   display: block;
   justify-content: center;
-  width: 15px;
-  height: 15px;
+  inline-size: 15px;
+  block-size: 15px;
   background-color: #FFF;
 }
 
 .button {
-  display: block;
-  justify-content: center;
-  align-items:center;
   background-color: transparent;
   border: 1px solid #FFF;
   color: #FFF;
-  text-align: center;
-  font-family: 'Fira Sans Condensed' sans-serif;
+  font-family: 'Fira Sans Condensed';
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  height: 34px;
+  gap: 10px;
 }
 
 .button:hover {
@@ -173,7 +178,6 @@ fieldset{
 }
 
 .button:active {
-  outline: 1px solid #FFF;
   background: #545050;
 }
 
@@ -187,13 +191,13 @@ fieldset{
 }
 
 .more-button {
-  width: 399px;
-  height: 34px;
+  inline-size: 100%; /*399px;*/
+  block-size: 34px;
 }
 
 .search-form__submit-button{
-  width: 194px;
-  height: 34px;
+  inline-size: 194px;
+  block-size: 34px;
 }
 
 .content__list {
@@ -210,7 +214,7 @@ fieldset{
   text-decoration: none;
   padding: 2px;
   outline-style: none;
-  width: 394px;
+  inline-size: 394px;
 }
 
 .content__card-link_current {
@@ -218,14 +222,14 @@ fieldset{
 }
 
 .content__list-item:not(:last-child) {
-  margin-bottom: 30px;
+  margin-block-end: 30px;
 }
 
 .content__video-card{
   display: flex;
   align-items: start;
   justify-content: space-between;
-  width: 394px;
+  inline-size: 394px;
 }
 
 .content__card-link:hover {
@@ -246,16 +250,18 @@ fieldset{
 }
 
 .content__video-card-thumbnail {
-  height: 103px;
-  width: 100%;
+  block-size: 103px;
+  inline-size: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .content__video-card-description-container {
-  width: 100%;
+  inline-size: 100%;
 }
 
 .title {
-  margin-bottom: 26px;
+  margin-block-end: 26px;
   color: #FFF;
   font-family: Oswald, sans-serif;
   font-size: 75px;
@@ -285,8 +291,8 @@ fieldset{
   font-weight: 700;
   line-height: 100%;
   text-transform: uppercase;
-  padding-top: 6px; /*добавила, чтобы при состоянии :hover у карточки сверху была ровная линия*/
-  padding-bottom: 6px;
+  padding-block-start: 6px; /*добавила, чтобы при состоянии :hover у карточки сверху была ровная линия*/
+  padding-block-end: 6px;
 }
 
 .content__video-card-description {
